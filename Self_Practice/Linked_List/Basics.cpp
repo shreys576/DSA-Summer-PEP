@@ -38,8 +38,9 @@ void InsertatNthPosition(Node* &head, int n, int val){
         temp = temp -> next;
         if(temp == NULL) return;
     }
-    if(temp -> next = NULL){
+    if(temp -> next == NULL){
         temp -> next = newnode;
+        return;
     }
     newnode -> next = temp -> next;
     temp -> next = newnode;
