@@ -48,6 +48,46 @@ bool Search(node* root, int key){
     else return Search(root -> right, key);
 }
 
+node* Delete(node* root, int key){
+    if(root == NULL) return NULL;
+
+    if(root -> val < key){
+        root -> right = Delete(root -> right, key);
+    }
+
+    else if(root -> val > key){
+        root -> left = Delete(root -> left, key);
+    }
+
+    else{
+        if(root -> left == NULL && root -> right == NULL){
+            delete root;
+            return NULL;
+        }
+        if(root -> right != NULL && root -> left == NULL){
+            node* temp = root -> right;
+            delete root;
+            return temp;
+        }
+
+        if(root -> left != NULL && root -> right == NULL){
+            node* temp = root -> left;
+            delete root;
+            return temp;
+        }
+        else{
+            node* temp = root -> right;
+            while(temp -> left){
+                temp = temp -> left;
+            }
+            root -> val = temp -> val;
+            root -> right = Delete(root -> right, temp -> val);
+        }
+    }
+
+    return root;
+}
+
 int main(){
     node* root = NULL;
     root = insert(root,10);
@@ -60,6 +100,10 @@ int main(){
     InOrder(root);
     cout << endl;
     PreOrder(root);
+    cout << endl;
+
+    root = Delete(root, 7);
+    InOrder(root);
     cout << endl;
 
     bool check = Search(root, 12);
