@@ -27,6 +27,7 @@ void BFS(node* root){
     }
 }
 
+
 int main(){
     node* root = new node(10);
     root -> left = new node(5);
