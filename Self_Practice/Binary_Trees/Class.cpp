@@ -57,4 +57,5 @@ int main(){
     bool check = ValidBST(root);
     cout << check << endl;
     
+    
 }
