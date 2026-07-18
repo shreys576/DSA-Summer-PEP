@@ -54,6 +54,7 @@ int main(){
     root = insert(root, 20);
 
 
+    
     node* root2 = NULL;
     root2 = insert(root2, 8);
     root2 = insert(root2, 4);
