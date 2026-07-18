@@ -52,10 +52,21 @@ int main(){
     root = insert(root, 2);
     root = insert(root, 6);
     root = insert(root, 20);
-    root -> right -> left = new node(6); 
+
+
+    node* root2 = NULL;
+    root2 = insert(root2, 8);
+    root2 = insert(root2, 4);
+    root2 = insert(root2, 10);
+    root2 = insert(root2, 2);
+    root2 = insert(root2, 6);
+    root2 = insert(root2, 20);
+    root2 -> right -> left = new node(1);
+    
 
     bool check = ValidBST(root);
     cout << check << endl;
-    
+    cout << ValidBST(root2) << endl;
+
     
 }
