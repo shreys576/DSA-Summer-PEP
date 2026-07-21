@@ -102,7 +102,7 @@ int main(){
     PreOrder(root);
     cout << endl;
 
-    root = Delete(root, 7);
+    root = Delete(root, 20);
     InOrder(root);
     cout << endl;
 
