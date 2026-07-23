@@ -16,7 +16,7 @@ int main(){
     vector<vector<int>> adj(n);
     for(int i = 0; i < m; i++){
         int a, b;
-        cout << "For vertex edge " << i + 1 << endl;
+        cout << "For vertex edge " << i + 1 << endl;    
         cout << "Enter First vertex in edge: ";
         cin >> a;
         cout << "Enter Second vertex in edge: ";
