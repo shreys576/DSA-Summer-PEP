@@ -39,5 +39,6 @@ int main(){
     insertAtBeginning(head, 4);
     insertAtBeginning(head, 8);
     insertAtBeginning(head, 12);
+    insertAtBeginning(head, 5);
     Print(head);
 }
