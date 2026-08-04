@@ -24,6 +24,19 @@ void insertAtBeginning(Node* &head, int val){
     head = newnode;
 }
 
+void insertAtEnd(Node* &head, int val){
+    if(!head){
+        insertAtBeginning(head, val);
+        return;
+    }
+    Node* newnode = new Node(val);
+    Node* temp = head;
+    while(temp -> next){
+        temp = temp -> next;
+    }
+    temp -> next = newnode;
+}
+
 void Print(Node* head){
     Node* temp = head;
     while(temp){
@@ -48,5 +61,6 @@ int main(){
     insertAtBeginning(head, 67);
     insertAtBeginning(head, 76);
     insertAtBeginning(head, 46);
+    insertAtEnd(head, 99);
     Print(head);
 }
