@@ -47,5 +47,6 @@ int main(){
     insertAtBeginning(head, 55);
     insertAtBeginning(head, 67);
     insertAtBeginning(head, 76);
+    insertAtBeginning(head, 46);
     Print(head);
 }
